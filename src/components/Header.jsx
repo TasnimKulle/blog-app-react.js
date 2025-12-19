@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router";
 import { FaUserAlt } from "react-icons/fa";
 import { CiMenuBurger } from "react-icons/ci";
-import { IoIosClose } from "react-icons/io";
+import { IoIosClose } from "react-icons/io"; 
+import { useAuth } from "../context/AuthContext";
 
 export const Header = () => {
   const [isMenuOpens, setIsMenuOpes] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const {isLoggedIn, profile} = useAuth()
+  console.log(',,,,,', profile.username)
   const avatar_url = null;
   //   'https://media.istockphoto.com/id/2248985094/photo/portrait-of-muslim-woman-in-kebaya-sitting-in-garden-looking-at-camera.webp?a=1&b=1&s=612x612&w=0&k=20&c=gSSiMkUg-AuRvM4KQEfC8idTlAcQUpVCDMaBaxdSzhk='
   return (
@@ -68,7 +70,7 @@ export const Header = () => {
                 // profile menu
                 <>
                   <div className="text-sm text-gray-700">
-                    <span>Hello, Tasnim</span>
+                    <span>Hello, {profile.username}</span>
                   </div>
                   <div className="relative">
                     <button
