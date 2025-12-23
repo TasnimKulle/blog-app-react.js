@@ -8,7 +8,7 @@ export const SignIn = () => {
   const [password, setPassword] = useState();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [success, setSuccess] = useState();
+  // const [success, setSuccess] = useState();
     const authIfo = useAuth()
   console.log({ authIfo })
 

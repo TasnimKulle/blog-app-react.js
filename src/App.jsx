@@ -12,7 +12,9 @@ import UnAuthenticatedRoute from "./components/UnAuthenticatedRoute";
 import { ArticleEditorPage } from "./Pages/ArticleEditorPage";
 import { ManageArticlesPage } from "./Pages/ManageArticlesPage";
 import { ProfilePage } from "./Pages/ProfilePage";
-import { ProtectedRoute } from "./components/ProtectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute";
+import { Toaster } from "react-hot-toast";
+
 function App() {
   return (
     <AuthProvider>
@@ -48,9 +50,8 @@ function App() {
             <Route
               path="/editor"
               element={
-                
                 <ProtectedRoute>
-                    <ArticleEditorPage />
+                  <ArticleEditorPage />
                 </ProtectedRoute>
               }
             />
@@ -74,6 +75,7 @@ function App() {
         {/* footer */}
         <Footer />
       </div>
+      <Toaster/>
     </AuthProvider>
   );
 }

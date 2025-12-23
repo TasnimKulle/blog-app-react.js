@@ -3,7 +3,6 @@ import { useAuth } from "../context/AuthContext";
 
 export default function UnAuthenticatedRoute({ children, redirectTo = "/" }) {
 
-
     const { isLoggedIn, isLoading } = useAuth()
 
 

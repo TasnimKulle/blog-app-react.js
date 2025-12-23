@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { getUserProfile, onAuthChange, } from "../lib/auth";
+import { getUserProfile, onAuthChange, signOut } from "../lib/auth";
 
 const AuthContext = createContext(null);
 
