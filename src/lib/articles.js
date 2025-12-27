@@ -13,7 +13,7 @@ export const createArticle = async (article) => {
         tags: article.tags,
         author_id: article.authorId,
         published: article.published || false,
-        featured_image: article.featuredImageUrl || null
+       featured_Image: article.featuredImageUrl || null
     }
 
     // insert to supabase
